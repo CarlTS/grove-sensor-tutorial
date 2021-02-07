@@ -1,5 +1,6 @@
 {
     "name": "Grove-Sensor-Tutorial",
+    "version": "0.0.1",
     "description": "",
     "dependencies": {
         "core": "*",
