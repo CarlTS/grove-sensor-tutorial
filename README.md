@@ -1,6 +1,10 @@
 
 > Open this page at [https://carlts.github.io/grove-sensor-tutorial/](https://carlts.github.io/grove-sensor-tutorial/)
 
+## Tutorials
+* [groveSensors](/grove-sensor-tutorial/groveSensors)
+
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
