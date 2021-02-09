@@ -1,4 +1,5 @@
 ### @activities 1
+### @diffs true
 # Sensors & Microbit @ WTS
 
 ## Introduction
@@ -46,7 +47,7 @@ Connect your microbit and download your code
 
 ## Activity 2 - Control a light
 
-### Step 1
+### Step 1 - Collect Parts
 In this activity you will learn how to turn an LED on and off
 
 Collect the parts you will need;
@@ -55,15 +56,45 @@ Collect the parts you will need;
 1x Grove Shield
 1x micro:bit
 
-### Step 2
-Plug the microbit into the Shield
+### Step 2 - Connect Wires
+Plug the microbit into the Shield 
 
-### Step 3
 Plug the LED into Pin 0
 ![image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/ledbuttonpress.jpg)
 
-## Activity 3
+### Step 3 - Program
+Place an ``||input:onButtonPressed||`` and add a ``||pins:digital write pin||``
 
+Change the '0' to a '1' 
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    pins.digitalWritePin(DigitalPin.P0, 1)
+})
+```
+
+
+### Step 4 - Program Continued
+Place another ``||input:onButtonPressed||`` and change it to when 'B' is onButtonPressed
+
+Add another ``||pins:digital write pin||``
+
+Change the '0' to a '1'
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    pins.digitalWritePin(DigitalPin.P0, 1)
+})
+input.onButtonPressed(Button.B, function () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+})
+```
+
+
+
+
+
+## Activity 3
 ### Step 1
 ### Finish
 
