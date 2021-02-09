@@ -64,9 +64,9 @@ Plug the Light Sensor into Pin 0
 ![image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/lightsensor.jpg)
 
 ### Step 3 - Program
-Place an ``||basic:forever||`` then add an LED block ``||led:plot bar graph of ... up to||``
+Place an ``||input:onButtonPressed||`` then add a ``||pins:digitalWritePin||`` block
 
-
+Change the 0 to a 1
 ```blocks
 input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(DigitalPin.P0, 1)
@@ -79,7 +79,6 @@ Place another ``||input:onButtonPressed||`` and change it to when 'B' is onButto
 
 Add another ``||pins:digital write pin||``
 
-Change the '0' to a '1'
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -168,37 +167,9 @@ Click ``|Download|`` to transfer your code and press button A and B to see if th
 
 
 
-## Activity 3
-### Step 1
-### Finish
 
 
-
-## Step 4 
-Connect your physical parts you will need
-
--1 Grove Sheild
-
--1 Grove LED
-
--1 Wire
-
-*Video/Gif of how to wire
-
-## Step 5
-Add an ``||input:onButtonPressed||`` 
-
-
-
-Click ``|Download|`` to transfer your code in your unknown macro!
-
-Start by placing the 
-```blocks
-let _4Digit: grove.TM1637 = null
-_4Digit.show(0)
-```
-
-## Step END
+### Step END
 We have added the Grove Extension for you in this tutorial.
 
 You will need to add it yourself by...
