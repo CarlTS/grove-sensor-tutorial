@@ -4,9 +4,10 @@
 ## Introduction
 ### Introduction step @unplugged
 <!---  @unplugged Deprecated use @showdialog --->
-**IN DEVELOPMENT**
-You will learn how to use certain sensors with your micro:bit
+![](https://www.whittleseatechschool.vic.edu.au/wp-content/uploads/2020/07/WTS-2019-logo.png)
+You will learn how to use certain sensors and components with your micro:bit
 
+**Under Construction**
 ## Activity 1 - Connect & Test Microbit
 
 ### Step 1 Connecting the microbit @showhint
@@ -52,14 +53,13 @@ Control a light
 In this activity you will learn how to turn an LED on and off
 
 Collect the parts you will need;
-
-1x Grove Light Sensor
-1x Grove Shield
-1x micro:bit
+Markup : 
+* 1x Grove Light Sensor
+* 1x Grove Shield
+* 1x micro:bit
 
 ### Step 2 - Connect Wires
 Plug the microbit into the Shield 
-
 Plug the Light Sensor into Pin 0
 ![image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/lightsensor.jpg)
 
@@ -160,15 +160,20 @@ Click ``|Download|`` to transfer your code and press button A and B to see if th
 
 
 
+## Activity Challenge
+### Challenge Time
+Challenge Time
+===========
+Now that you have completed the tutorials here are few challenges you can try
+Markup : 
+* The light gets brighter the darker it is
+* An alarm sounds if something gets too close 
 
 
 
 
 
-
-
-
-
+## Final Warning
 ### Step END
 We have added the Grove Extension for you in this tutorial.
 
