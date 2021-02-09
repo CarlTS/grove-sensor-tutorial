@@ -1,16 +1,27 @@
 ### @activities 1
-# Sensors & Microbit @ WTS
-## Introduction
-### Introduction step @unplugged
-<!---  @unplugged Deprecated use @showdialog --->
-**IN DEVELOPMENT**
 
+# Sensors & Microbit @ WTS
+
+## Introduction
+
+### Introduction step @unplugged
+Test words
+<!---  @unplugged Deprecated use @showdialog --->
+
+### **IN DEVELOPMENT**
 You will learn how to use certain sensors with your micro:bit
 
 ## Activity 1 - Connect & Test Microbit
-### Step 1 - Testing Microbit connection
+
+### Step 1 Connecting the microbit @showhint
+Learn how to use the LEDs and make a flashing heart! 
+(Need to know how to connect your microbit to your computer? [Watch this video](https://www.youtube.com/watch?v=NpEaa2P7qZI)).
+
+### Step 2
 Test your microbit without Grove
+
 Place the ``||basic:show leds||`` block in the ``||basic:forever||`` block and draw a pattern.
+
 ```blocks
 basic.forever(function () {
     basic.showLeds(`
@@ -22,16 +33,13 @@ basic.forever(function () {
         `)
 })
 ```
+### Step 3 - Upload the code
+Connect your microbit and download your code *Video/GIF of how to connect with pairing
+Once it is working on the real microbit well done!
 
-### Step 2 - Upload the code
-Connect your microbit and [download your code](https://www.youtube.com/watch?v=qSjMDG84bMY).
+## Activity 2
 
-Make sure it is working on your microbit.
-
-## Activity 2 - Control a Light
-
-### Step 1 - Wiring 
-
+### Step 1
 ### Step 2
 ### Step 3
 
@@ -66,10 +74,6 @@ Start by placing the
 let _4Digit: grove.TM1637 = null
 _4Digit.show(0)
 ```
-
-## Activity Last
-We have added the grove extension for you throughout this tutorial.
-You will need to add it yourself when you make your own projects
 
 ```package
 Grove=github:seeed-studio/pxt-grove
