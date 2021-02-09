@@ -1,5 +1,4 @@
 ### @activities 1
-### @diffs true
 # Sensors & Microbit @ WTS
 
 ## Introduction
@@ -39,33 +38,34 @@ Place the ``||basic:show leds||`` block in the ``||basic:forever||`` block and d
 ![An animation that shows how to drag a block and paint a heart](/static/mb/projects/flashing-heart/showleds.gif)
 
 ### Step 3 - Upload the code @fullscreen
-Connect your microbit and download your code 
-
-![heart](static/mb/projects/flashing-heart/sim.gif)
+Connect your microbit and ``|Download|`` your code 
 
 [Need help connecting?](https://www.youtube.com/watch?v=qSjMDG84bMY)
+![heart](static/mb/projects/flashing-heart/sim.gif)
 
+
+<!---  NEW ACTIVITY --->
 ## Activity 2 - Control a light
-
-### Step 1 - Collect Parts
+### Step 1 - Collect Parts @unplugged
+Control a light
+=============
 In this activity you will learn how to turn an LED on and off
 
 Collect the parts you will need;
 
-1x Grove LED
+1x Grove Light Sensor
 1x Grove Shield
 1x micro:bit
 
 ### Step 2 - Connect Wires
 Plug the microbit into the Shield 
 
-Plug the LED into Pin 0
-![image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/ledbuttonpress.jpg)
+Plug the Light Sensor into Pin 0
+![image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/lightsensor.jpg)
 
 ### Step 3 - Program
-Place an ``||input:onButtonPressed||`` and add a ``||pins:digital write pin||``
+Place an ``||basic:forever||`` then add an LED block ``||led:plot bar graph of ... up to||``
 
-Change the '0' to a '1' 
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -89,6 +89,80 @@ input.onButtonPressed(Button.B, function () {
     pins.digitalWritePin(DigitalPin.P0, 0)
 })
 ```
+
+### Step 4 - Program Continued
+Click ``|Download|`` to transfer your code and press button A and B to see if the works 
+
+
+
+
+
+<!---  NEW ACTIVITY --->
+## Activity 3 - Sense the light level
+
+### Step 1 - Collect Parts @unplugged
+Sense the light level
+=============
+In this activity you will learn how to sense the amount of light or brightness
+
+Collect the parts you will need;
+
+1x Grove Light Sensor
+1x Grove Shield
+1x micro:bit
+
+### Step 2 - Connect Wires
+Plug the microbit into the Shield 
+
+Plug the Light Sensor into Pin 0
+![image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/lightsensor.jpg)
+
+### Step 3 - Program
+Place a ``||basic:forever||`` then add a ``||led:plot bar graph of ... up to||``
+
+Change the ``||led:up to||`` number from '0' to '255' 
+
+```blocks
+basic.forever(function () {
+    led.plotBarGraph(
+    0,
+    255
+    )
+})
+```
+### Step 4 - Program Continued
+Place a ``||pins:analog read||`` into the ``||led:plot bar graph of||`` field
+
+```blocks
+basic.forever(function () {
+    led.plotBarGraph(
+    pins.analogReadPin(AnalogPin.P0),
+    255
+    )
+})
+```
+### Step 5 - Program Continued
+To give the sensor enough time to work, place a ``||basic:pause||`` after the ``||led:plot bar graph of... up to..||``
+
+```blocks
+basic.forever(function () {
+    led.plotBarGraph(
+    pins.analogReadPin(AnalogPin.P0),
+    255
+    )
+    basic.pause(10)
+})
+```
+
+### Step 4 - Download Program
+Click ``|Download|`` to transfer your code and press button A and B to see if the works 
+
+
+
+
+
+
+
 
 
 
