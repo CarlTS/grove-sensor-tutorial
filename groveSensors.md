@@ -7,15 +7,24 @@
 ![](https://www.whittleseatechschool.vic.edu.au/wp-content/uploads/2020/07/WTS-2019-logo.png)
 You will learn how to use certain sensors and components with your micro:bit
 
-**Under Construction**
-## Activity 1 - Connect & Test Microbit
+To get started we will connect and test your micro:bit
 
-### Step 1 Connecting the microbit @showhint
+**Under Construction**
+
+
+
+
+<!---------------------------------------------------------------  
+-------------------------  NEW ACTIVITY -------------------------
+----------------------------------------------------------------->
+## Activity 1 - Connect & Test Microbit
+<!---  Designed to test if the microbit is working --->
+### Step 1 Connecting the microbit 
 Plug in your microbit and connect!
 
 Need to know how to connect your microbit to your computer? [Watch this video](https://www.youtube.com/watch?v=qSjMDG84bMY)
 
-### Step 2
+### Step 2 @fullscreen
 Test your microbit without Grove
 
 Place the ``||basic:show leds||`` block in the ``||basic:forever||`` block and draw a pattern.
@@ -30,22 +39,19 @@ basic.forever(function () {
         `)
 })
 ```
-### Step 2
-Staff Feedback Wanted
-
-Preference on hint
-
-Place the ``||basic:show leds||`` block in the ``||basic:forever||`` block and draw a pattern.
-![An animation that shows how to drag a block and paint a heart](/static/mb/projects/flashing-heart/showleds.gif)
-
-### Step 3 - Upload the code @fullscreen
+### Step 3 - Upload the code
 Connect your microbit and ``|Download|`` your code 
 
 [Need help connecting?](https://www.youtube.com/watch?v=qSjMDG84bMY)
-![heart](static/mb/projects/flashing-heart/sim.gif)
 
 
-<!---  NEW ACTIVITY --->
+
+
+
+
+<!---------------------------------------------------------------  
+-------------------------  NEW ACTIVITY -------------------------
+----------------------------------------------------------------->
 ## Activity 2 - Control a light
 ### Step 1 - Collect Parts @unplugged
 Control a light
@@ -54,10 +60,24 @@ In this activity you will learn how to turn an LED on and off
 
 Collect the parts you will need;
 Markup : 
-* 1x Grove Light Sensor
+* 1x Grove LED
 * 1x Grove Shield
 * 1x micro:bit
 
+![](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveLED-lbl.png "Grove LED")
+![](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveLED.png "Grove LED")
+1x Grove LED:![](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveLED.png "Grove LED")
+
+
+
+
+
+
+
+
+<!---------------------------------------------------------------  
+-------------------------  NEW ACTIVITY -------------------------
+----------------------------------------------------------------->
 ### Step 2 - Connect Wires
 Plug the microbit into the Shield 
 Plug the Light Sensor into Pin 0
