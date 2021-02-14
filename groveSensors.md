@@ -1,5 +1,11 @@
 ### @activities 1
 # Sensors & Microbit @ WTS
+```template
+basic.forever(function () {
+	
+})
+```
+
 
 ## Introduction
 ### Introduction step @unplugged
@@ -73,7 +79,7 @@ Physical Connection
 ### Step 3 - Program
 Coding: Turning the light On
 ---------------------------------
-Place an ``||input:on Button A Pressed||`` then add a ``||pins:digitalWritePin||`` block
+Place an ``||input:on Button A Pressed||`` then add a ``||pins:digital Write Pin||`` block
 
 Change the 0 to a 1 (This will make the light turn on)
 ```blocks
@@ -107,7 +113,7 @@ input.onButtonPressed(Button.B, function () {
 
 
 ### Step 5 - Download Program
-Download the Program
+Download & Test
 --------------------
 Click ``|Download|`` to transfer your code and press button A and B to see if the works 
 
@@ -137,7 +143,16 @@ Physical Connection
 ![image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/lightsensor.jpg)
 
 ### Step 3 - Program
-Place a ``||basic:forever||`` then add a ``||led:plot bar graph of ... up to||``
+Coding: Clean Up
+-----------------
+For each new activity you will need to remove all previous blocks.  
+Delete all previous blocks from the workspace
+
+
+### Step 3 - Program
+Coding: Preparing the micro:bit graph
+------------------
+Place a ``||basic:forever||`` block and insert a ``||led:plot bar graph of ... up to||`` block
 
 Change the ``||led:up to||`` number from '0' to '1023' 
 
@@ -149,32 +164,58 @@ basic.forever(function () {
     )
 })
 ```
+'1023' is the range of the sensor
+
 ### Step 4 - Program Continued
+Coding: Read & graph the light level
+-------------------------------
 Place a ``||pins:analog read||`` into the ``||led:plot bar graph of||`` field
 
 ```blocks
 basic.forever(function () {
     led.plotBarGraph(
     pins.analogReadPin(AnalogPin.P0),
-    255
+    1023
     )
 })
 ```
+
+
+
+
+
+
+
 ### Step 5 - Program Continued
+Coding: Give the micro:bit some time to do its thing
+-----------------------------------------------------
 To give the sensor enough time to work, place a ``||basic:pause||`` after the ``||led:plot bar graph of... up to..||``
 
+Change the value of the pause to 10ms (*_Hint_*: you can type)
 ```blocks
 basic.forever(function () {
     led.plotBarGraph(
     pins.analogReadPin(AnalogPin.P0),
-    255
+    1023
     )
     basic.pause(10)
 })
 ```
+The pause gives just enough time for the sensor to work correctly
 
 ### Step 6 - Download Program
-Click ``|Download|`` to transfer your code and press button A and B to see if the works 
+Download & Test
+--------------------
+Click ``|Download|`` to transfer your code
+
+As you cover the light sensor the microbit graph should go up/down
+
+
+
+
+
+
+
 
 
 
