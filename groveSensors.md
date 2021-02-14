@@ -62,11 +62,6 @@ Collect the parts you will need;
 
 ![Parts Needed: 1x Grove LED, 1x Grove Shield, 1x micro:bit, 1xConnector](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveLED-parts.png)
 
-<!---Table works, but is clunky to use
-1x Grove LED|  1x Grove Shield | 1x micro:bit
-:-------------------------:|:-------------------------:|:-------------------------:
-![1x Grove LED](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveLED-lbl.png)  |  ![Grove Shield](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveSheild.png) |  ![1x microbit](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/microbit.png)
---->
 
 
 
@@ -80,7 +75,7 @@ Plug the Light Sensor into Pin 0
 ![image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/lightsensor.jpg)
 
 ### Step 3 - Program
-Place an ``||input:onButtonPressed||`` then add a ``||pins:digitalWritePin||`` block
+Place an ``||input:on Button A Pressed||`` then add a ``||pins:digitalWritePin||`` block
 
 Change the 0 to a 1
 ```blocks
