@@ -59,18 +59,14 @@ Control a light
 In this activity you will learn how to turn an LED on and off
 
 Collect the parts you will need;
-Markup : 
-* 1x Grove LED
-* 1x Grove Shield
-* 1x micro:bit
 
-![](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveLED-lbl.png "Grove LED")
-![](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveLED.png "Grove LED")
-1x Grove LED:![](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveLED.png "Grove LED")
+![Parts Needed: 1x Grove LED, 1x Grove Shield, 1x micro:bit, 1xConnector](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveLED-parts.png)
 
-
-
-
+<!---Table works, but is clunky to use
+1x Grove LED|  1x Grove Shield | 1x micro:bit
+:-------------------------:|:-------------------------:|:-------------------------:
+![1x Grove LED](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveLED-lbl.png)  |  ![Grove Shield](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveSheild.png) |  ![1x microbit](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/microbit.png)
+--->
 
 
 
@@ -95,7 +91,7 @@ input.onButtonPressed(Button.A, function () {
 
 
 ### Step 4 - Program Continued
-Place another ``||input:onButtonPressed||`` and change it to when 'B' is onButtonPressed
+Place another ``||input:on Button A Pressed||`` and change it to when 'B' is onButtonPressed
 
 Add another ``||pins:digital write pin||``
 
