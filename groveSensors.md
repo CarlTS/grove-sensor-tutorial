@@ -456,6 +456,184 @@ When you move your hand Right, the screen will say "Right", when you move your h
 
 
 
+<!---------------------------------------------------------------  
+-------------------------  NEW ACTIVITY -------------------------
+----------------------------------------------------------------->
+## Activity 7 - Counter
+### Step 1 - Collect Parts @unplugged
+Counting Counter
+=============
+In this activity you will learn how to use 4-digit display
+
+Collect the parts you will need;
+![Parts Needed: 1 4-digitDisplay, 1 microbit, 1 sheild](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/4DigitDisplay.png)
+
+### Step 2 - Connect Wires
+Physical Connection
+-------------------
+1. Plug the microbit into the Shield 
+2. Plug the 4Digit Display into the P0 pin
+![Connection Image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/4digitdisplaysetup.jpg)
+
+
+### Step 3 - Program
+Coding: Setup the display
+------------------
+Place a ``||grove:Set 4Digit to Display||`` block inside a ``||basic:On Start||``
+
+Set the pins to ``||grove:P0||`` and ``||grove:P14||``
+
+```blocks
+let _4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+```
+This tells the microbit how to work with the display
+
+
+### Step 4 - Initial Setup
+Coding: First Display
+------------------
+Insert a ``||grove:4Digit show number||`` after the ``||grove:Set 4Digit to Display||``
+
+This will show a 0 on the display when it is ready.
+
+```blocks
+let _4Digit: grove.TM1637 = null
+_4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+_4Digit.show(0)
+```
+The 0 will appear on the display once you download the code.
+
+
+### Step 5 - Display Change
+Coding: Change the Display Preparation
+------------------
+Place a ``||input:On Button A Pressed||`` and insert a ``||grove:4Digit show number||``
+
+This prepares the display for a random number generator in the next step
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    _4Digit.show(0)
+})
+let _4Digit: grove.TM1637 = null
+_4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+```
+
+
+### Step 6 - Random Number
+Coding: Random Numbers
+------------------
+Inside the ``||math:Math||`` tab, you will find the ``||math: pick random '0' to '10'||``
+
+Replace the "0" in the ``||grove:4Digit show number||`` with the ``||math: pick random '0' to '10'||`` block
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    _4Digit.show(randint(0, 10))
+})
+let _4Digit: grove.TM1637 = null
+_4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+```
+
+### Step 7 - Download Program
+Download & Test
+--------------------
+Click ``|Download|`` to transfer your code
+When you press the 'A' button, the number will randomly change on the 4 Digit Display
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------------------------------------------------  
+-------------------------  NEW ACTIVITY -------------------------
+----------------------------------------------------------------->
+## Activity 8 - Ultrasonic Sensor
+### Step 1 - Collect Parts @unplugged
+How far away?
+=============
+In this activity you will learn how to use an Ultrasonic Distance Sensor with a 4-digit display
+
+Collect the parts you will need;
+![Parts Needed: 1 ultrasonic sensor, 1 4-digitDisplay, 1 microbit, 1 sheild](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/Ultrasonic%20Sensor.png)
+
+### Step 2 - Connect Wires
+Physical Connection
+-------------------
+1. Plug the microbit into the Shield 
+2. Plug the Gesture Sensor into the P0 pin
+![Connection Image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/ultrasonicDisplay.jpg)
+
+### Step 3 - Program
+Coding: Setup the display
+------------------
+Place a ``||grove:Set 4Digit to Display||`` block inside a ``||basic:On Start||``
+
+Set the pins to ``||grove:P0||`` and ``||grove:P14||``
+
+```blocks
+let _4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+```
+This tells the microbit how to work with the display
+
+
+### Step 4 - Initial Setup
+Coding: First Display
+------------------
+Just like before, insert a ``||grove:4Digit show number||`` after the ``||grove:Set 4Digit to Display||``
+
+This will show a 0 on the display when it is ready.
+
+```blocks
+let _4Digit: grove.TM1637 = null
+_4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+_4Digit.show(0)
+```
+The 0 will appear on the display once you download the code.
+
+
+### Step 5 - Display Change
+Coding: Change the Display Preparation
+------------------
+Place a ``||basic:Forever||`` block and insert a ``||grove:4Digit show number||``
+
+This prepares the display for the ultrasonic distance in the next step
+
+```blocks
+let _4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+basic.forever(function () {
+    _4Digit.show(0)
+})
+```
+
+
+### Step 6 - Ultrasonic Distance
+Coding: Ultrasonic Distance
+------------------
+Replace the "0" in the ``||grove:4Digit show number||`` with a ``||grove:(V2)Ultrasonic Sensor in (cm) at 'PO'||`` block
+
+
+```blocks
+let _4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+basic.forever(function () {
+    _4Digit.show(grove.measureInCentimetersV2(DigitalPin.P0))
+})
+```
+
+### Step 7 - Download Program
+Download & Test
+--------------------
+Click ``|Download|`` to transfer your code
+The 4Digit Display will show how far away something is from the ultrasonic sensor 
+
+
 
 
 
