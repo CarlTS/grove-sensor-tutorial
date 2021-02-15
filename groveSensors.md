@@ -79,7 +79,7 @@ Physical Connection
 ### Step 3 - Program
 Coding: Turning the light On
 ---------------------------------
-Place an ``||input:on Button A Pressed||`` then add a ``||pins:digital Write Pin||`` block
+Place an ``||input:on Button A Pressed||`` then add a ``||pins:digital Write Pin||`` block (Under Advanced)
 
 Change the 0 to a 1 (This will make the light turn on)
 ```blocks
@@ -149,7 +149,7 @@ For each new activity you will need to remove all previous blocks.
 Delete all previous blocks from the workspace
 
 
-### Step 3 - Program
+### Step 4 - Program
 Coding: Preparing the micro:bit graph
 ------------------
 Place a ``||basic:forever||`` block and insert a ``||led:plot bar graph of ... up to||`` block
@@ -166,7 +166,7 @@ basic.forever(function () {
 ```
 '1023' is the range of the sensor
 
-### Step 4 - Program Continued
+### Step 5 - Program Continued
 Coding: Read & graph the light level
 -------------------------------
 Place a ``||pins:analog read||`` into the ``||led:plot bar graph of||`` field
@@ -180,13 +180,7 @@ basic.forever(function () {
 })
 ```
 
-
-
-
-
-
-
-### Step 5 - Program Continued
+### Step 6 - Program Continued
 Coding: Give the micro:bit some time to do its thing
 -----------------------------------------------------
 To give the sensor enough time to work, place a ``||basic:pause||`` after the ``||led:plot bar graph of... up to..||``
@@ -203,7 +197,7 @@ basic.forever(function () {
 ```
 The pause gives just enough time for the sensor to work correctly
 
-### Step 6 - Download Program
+### Step 7 - Download Program
 Download & Test
 --------------------
 Click ``|Download|`` to transfer your code
@@ -214,6 +208,93 @@ As you cover the light sensor the microbit graph should go up/down
 
 
 
+
+
+
+
+<!---------------------------------------------------------------  
+-------------------------  NEW ACTIVITY -------------------------
+----------------------------------------------------------------->
+## Activity 3 - Rotary Encoder
+
+### Step 1 - Collect Parts @unplugged
+Turn to Change
+=============
+In this activity you will learn how to use the rotary angle sensor
+
+Collect the parts you will need;
+![Parts Needed 1 Rotary, 1 microbit, 1 sheild](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/GroveSensors/GroveRotary.png)
+
+
+### Step 2 - Connect Wires
+Physical Connection
+-------------------
+1. Plug the microbit into the Shield 
+2. Plug the Rotary Angle Sensor into Pin 0
+![Connection Image]https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/rotaryAnglesensor.jpg
+
+
+### Step 3 - Program
+Coding: Clean Up
+-----------------  
+Remove all previous coding blocks from the workspace
+
+### Step 4 - Program
+Coding: Preparing the micro:bit graph again
+------------------
+Place a ``||basic:forever||`` block and insert a ``||led:plot bar graph of ... up to||`` block
+
+Change the ``||led:up to||`` number from '0' to '1023' 
+
+```blocks
+basic.forever(function () {
+    led.plotBarGraph(
+    0,
+    1023
+    )
+})
+```
+'1023' is the range of the sensor
+
+
+### Step 5 - Program Continued
+Coding: Connect the potentiometer to the microbit
+-------------------------------
+Place a ``||pins:analog read||`` into the ``||led:plot bar graph of||`` field
+
+```blocks
+basic.forever(function () {
+    led.plotBarGraph(
+    pins.analogReadPin(AnalogPin.P0),
+    1023
+    )
+})
+```
+
+### Step 6 - Program Continued
+Coding: Give the micro:bit some time to do its thing
+-----------------------------------------------------
+To give the sensor enough time to work, place a ``||basic:pause||`` after the ``||led:plot bar graph of... up to..||``
+
+Change the value of the pause to 100ms (*_Hint_*: you can type)
+```blocks
+basic.forever(function () {
+    led.plotBarGraph(
+    pins.analogReadPin(AnalogPin.P0),
+    1023
+    )
+    basic.pause(100)
+})
+```
+The pause gives just enough time for the sensor to work correctly
+
+
+### Step 7 - Download Program
+Download & Test
+--------------------
+Click ``|Download|`` to transfer your code
+
+As you turn the rotary angle sensor, the microbit graph should go up/down
 
 
 
