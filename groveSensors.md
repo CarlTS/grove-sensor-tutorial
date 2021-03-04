@@ -7,6 +7,7 @@ basic.forever(function () {
 ```
 
 
+
 ## Introduction
 ### Introduction step @unplugged
 <!---  @unplugged Deprecated use @showdialog --->
@@ -14,12 +15,7 @@ basic.forever(function () {
 You will learn how to use certain sensors and components with your micro:bit
 
 To get started we will connect and test your micro:bit
-
-****_Under Construction_****
 ============================
-
-
-
 
 <!---------------------------------------------------------------  
 -------------------------  NEW ACTIVITY -------------------------
@@ -91,6 +87,7 @@ input.onButtonPressed(Button.A, function () {
 1 = On
 
 0 = Off
+
 
 ### Step 4 - Program Continued
 Coding: Turning the light Off
