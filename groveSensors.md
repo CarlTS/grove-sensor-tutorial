@@ -1,12 +1,12 @@
 # groveSensors
 
-## Step 1 -Introduction @showdialog
+## Step 1 -Introduction @unplugged
 <!---  @unplugged Deprecated use @showdialog --->
 ### **IN DEVELOPMENT**
 Welcome to the Whittlesea Tech School micro:bit training guide.
 You will learn how to use certain sensors with your micro:bit
 
-## Step 2 - Connecting the microbit
+## Step 2 - Connecting the microbit @show
 Learn how to use the LEDs and make a flashing heart! 
 (Need to know how to connect your microbit to your computer? [Watch this video](https://www.youtube.com/watch?v=NpEaa2P7qZI)).
 
@@ -47,6 +47,18 @@ Connect your physical parts you will need
 Add an ``||input:onButtonPressed||`` 
 
 
+```blocks
+input.onButtonPressed(Button.A, function () {
+    basic.showLeds(`
+        # . # . #
+        . # # # .
+        # # # # #
+        . # # # .
+        # . # . #
+        `)
+})
+
+```
 
 ## Step 555
 
