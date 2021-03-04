@@ -1,5 +1,5 @@
 ### @activities 1
-# Sensors & Microbit @ WTS
+# Inputs & Outputs with Microbit
 ```template
 basic.forever(function () {
 	
@@ -10,14 +10,10 @@ basic.forever(function () {
 ## Introduction
 ### Introduction step @unplugged
 <!---  @unplugged Deprecated use @showdialog --->
-![](https://www.whittleseatechschool.vic.edu.au/wp-content/uploads/2020/07/WTS-2019-logo.png)
-You will learn how to use certain sensors and components with your micro:bit
+![](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/combinedlogo.png)
+You will learn how to use certain input sensors and outputs with your micro:bit
 
 To get started we will connect and test your micro:bit
-
-****_Under Construction_****
-============================
-
 
 
 
