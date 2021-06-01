@@ -585,7 +585,7 @@ Coding: First Display
 ------------------
 Just like before, insert a ``||grove:4Digit show number||`` after the ``||grove:Set 4Digit to Display||``
 
-This will show a 0 on the display when it is ready.
+This will show a 0 on the display and show it is connected correctly.
 
 ```blocks
 let _4Digit: grove.TM1637 = null
@@ -603,7 +603,9 @@ Place a ``||basic:Forever||`` block and insert a ``||grove:4Digit show number||`
 This prepares the display for the ultrasonic distance in the next step
 
 ```blocks
-let _4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+let _4Digit: grove.TM1637 = null
+_4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+_4Digit.show(0)
 basic.forever(function () {
     _4Digit.show(0)
 })
@@ -617,7 +619,9 @@ Replace the "0" in the ``||grove:4Digit show number||`` with a ``||grove:(V2)Ult
 
 
 ```blocks
-let _4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+let _4Digit: grove.TM1637 = null
+_4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+_4Digit.show(0)
 basic.forever(function () {
     _4Digit.show(grove.measureInCentimetersV2(DigitalPin.P0))
 })
