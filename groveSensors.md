@@ -69,7 +69,7 @@ Collect the parts you will need;
 Physical Connection
 -------------------
 1. Plug the microbit into the Shield 
-2. Plug the Light Sensor into Pin 0
+2. Plug the LED into Pin 0
 ![image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/ledbuttonpress.jpg)
 
 ### Step 3 - Program
@@ -409,11 +409,11 @@ grove.onGesture(GroveGesture.Right, function () {
 ### Step 4 - Program
 Coding: Action from Gesture Input
 ------------------
-Place a ``||basic:show string||`` block inside the ``||grove:on gesture||`` and change the word from "Hello" to "Right"
+Place a ``||basic:show string||`` block inside the ``||grove:on gesture||`` and change the word from "Hello" to "R"
 
 ```blocks
 grove.onGesture(GroveGesture.Right, function () {
-    basic.showString("Right")
+    basic.showString("R")
 })
 ```
 
@@ -421,26 +421,27 @@ grove.onGesture(GroveGesture.Right, function () {
 Coding: Other Gestures
 ------------------
 Place a new ``||grove:on gesture||`` block and change the gesture to ``||grove:Left||``
-Insert a ``||basic:show string||`` and change the word to "Left"
+Insert a ``||basic:show string||`` and change the word to "L"
 
 
 ```blocks
 grove.onGesture(GroveGesture.Right, function () {
-    basic.showString("Right")
+    basic.showString("R")
 })
 grove.onGesture(GroveGesture.Left, function () {
-    basic.showString("Left")
+    basic.showString("L")
 })
 ```
 This will now sense both directions
 
+<!---Additional Step needed to demonstrate how pause works so buffer does not fill up --->
 
 ### Step 6 - Download Program
 Download & Test
 --------------------
 Click ``|Download|`` to transfer your code
 
-When you move your hand Right, the screen will say "Right", when you move your hand Left, the screen will say "Left"
+When you move your hand Right, the screen will say "R", when you move your hand Left, the screen will say "L"
 
 
 
@@ -564,7 +565,7 @@ Collect the parts you will need;
 Physical Connection
 -------------------
 1. Plug the microbit into the Shield 
-2. Plug the Gesture Sensor into the P0 pin
+2. Plug the Ultrasonic Sensor into the P0 pin
 ![Connection Image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/ultrasonicDisplay.jpg)
 
 ### Step 3 - Program
@@ -572,10 +573,10 @@ Coding: Setup the display
 ------------------
 Place a ``||grove:Set 4Digit to Display||`` block inside a ``||basic:On Start||``
 
-Set the pins to ``||grove:P0||`` and ``||grove:P14||``
+Set the pins to ``||grove:P1||`` and ``||grove:P15||``
 
 ```blocks
-let _4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+let _4Digit = grove.createDisplay(DigitalPin.P1, DigitalPin.P15)
 ```
 This tells the microbit how to work with the display
 
@@ -589,7 +590,7 @@ This will show a 0 on the display and show it is connected correctly.
 
 ```blocks
 let _4Digit: grove.TM1637 = null
-_4Digit = grove.createDisplay(DigitalPin.P0, DigitalPin.P14)
+_4Digit = grove.createDisplay(DigitalPin.P1, DigitalPin.P15)
 _4Digit.show(0)
 ```
 The 0 will appear on the display once you download the code.
