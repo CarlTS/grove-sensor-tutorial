@@ -618,6 +618,7 @@ basic.forever(function () {
 Coding: Ultrasonic Distance
 ------------------
 Replace the "0" in the ``||grove:4Digit show number||`` with a ``||grove:(V2)Ultrasonic Sensor in (cm) at 'PO'||`` block
+
 Change the "P0" to be "P1" to match
 
 ```blocks
