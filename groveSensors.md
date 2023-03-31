@@ -566,6 +566,7 @@ Physical Connection
 -------------------
 1. Plug the microbit into the Shield 
 2. Plug the Ultrasonic Sensor into the P0 pin
+3. Plug the 4-digitDisplay into the P1 pin 
 ![Connection Image](https://raw.githubusercontent.com/CarlTS/grove-sensor-tutorial/master/images/ultrasonicDisplay.jpg)
 
 ### Step 3 - Program
@@ -617,7 +618,7 @@ basic.forever(function () {
 Coding: Ultrasonic Distance
 ------------------
 Replace the "0" in the ``||grove:4Digit show number||`` with a ``||grove:(V2)Ultrasonic Sensor in (cm) at 'PO'||`` block
-
+Change the "P0" to be "P1" to match
 
 ```blocks
 let _4Digit: grove.TM1637 = null
